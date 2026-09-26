@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>إتمام الطلب | تونى كوزمتكس</title>
+<meta name="description" content="أكمل طلبك بأمان — الدفع عند الاستلام أو ببطاقة الائتمان.">
+<meta name="theme-color" content="#d94b8a">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div data-tc-header></div>
+
+<main>
+  <div class="page-head">
+    <div class="container">
+      <nav class="crumbs" aria-label="مسار التصفح">
+        <a href="index.html">الرئيسية</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+        <a href="cart.html">السلة</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+        <span class="crumbs__now">إتمام الطلب</span>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container">
+    <div data-checkout-root>
+      <div class="checkout">
+        <form data-order-form novalidate>
+          <!-- ================================== 1. contact -->
+          <div class="checkout__panel">
+            <div class="checkout__step"><span class="checkout__num">1</span><b>معلومات التواصل</b></div>
+            <div class="checkout__grid">
+              <div class="field">
+                <label class="field__label" for="f-name">الاسم الكامل *</label>
+                <input class="input" id="f-name" name="name" autocomplete="name" placeholder="مثال: سارة أحمد">
+                <span class="checkout__err">اكتب اسمك الكامل (حرفان على الأقل)</span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-phone">رقم الجوال *</label>
+                <input class="input" id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="059 123 4567">
+                <span class="checkout__err">أدخل رقم جوال فلسطيني صحيح (05xxxxxxxx)</span>
+              </div>
+              <div class="field span-2">
+                <label class="field__label" for="f-email">البريد الإلكتروني (اختياري)</label>
+                <input class="input" id="f-email" name="email" type="email" autocomplete="email" placeholder="name@example.com">
+                <span class="checkout__err">صيغة البريد غير صحيحة</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================================== 2. address -->
+          <div class="checkout__panel">
+            <div class="checkout__step"><span class="checkout__num">2</span><b>عنوان التوصيل</b></div>
+            <div class="checkout__grid">
+              <div class="field span-2">
+                <label class="field__label" for="f-city">المحافظة / المنطقة *</label>
+                <select class="select" id="f-city" name="area">
+                  <option value="">اختر المحافظة</option>
+                  <option value="ramallah">رام الله والقدس — 15 ₪ (خلال 24 ساعة)</option>
+                  <option value="center">الضفة الغربية — 20 ₪ (خلال 24 – 48 ساعة)</option>
+                  <option value="north">شمال فلسطين — 22 ₪ (خلال 48 – 72 ساعة)</option>
+                  <option value="gaza">غزة — 25 ₪ (خلال 48 – 72 ساعة)</option>
+                </select>
+                <span class="checkout__err">اختر المحافظة</span>
+              </div>
+              <div class="field span-2">
+                <label class="field__label" for="f-addr">العنوان بالتفصيل *</label>
+                <input class="input" id="f-addr" name="addr" autocomplete="street-address" placeholder="الحي، الشارع، أقرب معلم، رقم المبنى">
+                <span class="checkout__err">اكتب العنوان بالتفصيل (5 أحرف على الأقل)</span>
+              </div>
+              <div class="field span-2">
+                <label class="field__label" for="f-note">ملاحظات للمندوب (اختياري)</label>
+                <textarea class="textarea" id="f-note" name="note" placeholder="مثال: اتصل قبل الوصول، الدور الثالث"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================================== 3. payment -->
+          <div class="checkout__panel">
+            <div class="checkout__step"><span class="checkout__num">3</span><b>طريقة الدفع</b></div>
+
+            <label class="pay-opt is-active" data-pay="cod">
+              <input type="radio" name="pay" value="cod" checked>
+              <span><b>الدفع عند الاستلام</b><span>ادفع نقداً للمندوب عند وصول الطلب</span></span>
+              <span class="pay-opt__fees" data-cod-fee>بدون رسوم</span>
+            </label>
+
+            <label class="pay-opt" data-pay="card">
+              <input type="radio" name="pay" value="card">
+              <span><b>بطاقة ائتمان / مدى</b><span>فيزا · ماستركارد · مدى — تحويل آمن 100٪</span></span>
+              <span class="pay-opt__fees">بدون رسوم</span>
+            </label>
+
+            <div class="note-ok" style="margin-top:12px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3.5v6c0 5-3.4 9.2-8 10.5-4.6-1.3-8-5.5-8-10.5v-6z"/><path d="M9 12l2 2 4-4"/></svg>
+              <span>لا نطلب أبداً رمز التحقق أو كلمة مرور البطاقة عبر واتساب أو الهاتف. كل بياناتك محمية ومشفّرة.</span>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--lg btn--block" type="submit" data-submit>تأكيد الطلب</button>
+          <p class="summary__note" style="margin-top:12px">
+            بتأكيدك للطلب فإنك توافق على <a href="returns.html" style="color:var(--tc-brand);font-weight:700">سياسة الإرجاع</a>
+            و<a href="shipping.html" style="color:var(--tc-brand);font-weight:700">الشحن والتوصيل</a>.
+          </p>
+        </form>
+
+        <!-- ================================== summary -->
+        <aside>
+          <div class="summary" data-side></div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div data-tc-footer></div>
+
+<script src="assets/js/art.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/content.local.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/checkout.js"></script>
+</body>
+</html>

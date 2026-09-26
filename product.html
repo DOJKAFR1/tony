@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تفاصيل المنتج | تونى كوزمتكس</title>
+<meta name="description" content="تفاصيل المنتج، المكونات، طريقة الاستخدام والتقييمات في متجر تونى كوزمتكس.">
+<meta name="theme-color" content="#d94b8a">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div data-tc-header></div>
+
+<main>
+  <div class="page-head">
+    <div class="container">
+      <nav class="crumbs" aria-label="مسار التصفح" data-crumbs></nav>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="product" data-product></div>
+  </div>
+
+  <!-- ============================================ DESCRIPTION / SPECS -->
+  <section class="section-sm">
+    <div class="container" data-extra></div>
+  </section>
+
+  <!-- ============================================ REVIEWS -->
+  <section class="section-sm" data-reviews></section>
+
+  <!-- ============================================ RELATED -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-head__title h-lg">قد يعجبك أيضاً</h2>
+          <p class="section-head__sub">منتجات مشابهة من نفس القسم</p>
+        </div>
+        <a class="section-head__link" data-cat-link href="collection.html?c=all">عرض القسم
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+      </div>
+      <div class="scroller" data-scroller>
+        <div class="scroller__track" data-related></div>
+        <button class="scroller__nav scroller__nav--prev" aria-label="السابق">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button class="scroller__nav scroller__nav--next" aria-label="التالي">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-tc-footer></div>
+
+<script src="assets/js/art.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/content.local.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سلة التسوق | تونى كوزمتكس</title>
+<meta name="description" content="راجع منتجاتك في السلة قبل إتمام الطلب.">
+<meta name="theme-color" content="#d94b8a">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div data-tc-header></div>
+
+<main class="section-sm">
+  <div class="container">
+    <nav class="crumbs" aria-label="مسار التصفح" style="margin-bottom:18px">
+      <a href="index.html">الرئيسية</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+      <span class="crumbs__now">سلة التسوق</span>
+    </nav>
+
+    <h1 class="h-lg" style="margin-bottom:20px">سلة التسوق <span class="muted" data-head-count></span></h1>
+
+    <div class="cart-page" data-cart-root>
+      <section class="cart-page__items" data-items></section>
+      <aside class="cart-page__side" data-side></aside>
+    </div>
+  </div>
+</main>
+
+<!-- ============================================ COUPON / CROSS SELL -->
+<section class="section-sm" data-cross></section>
+
+<!-- ============================================ TRUST -->
+<section class="section-sm">
+  <div class="container">
+    <div class="features" data-trust></div>
+  </div>
+</section>
+
+<div data-tc-footer></div>
+
+<script src="assets/js/art.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/content.local.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/cart.js"></script>
+</body>
+</html>

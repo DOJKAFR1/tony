@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المنتجات | تونى كوزمتكس</title>
+<meta name="description" content="تصفّح كل منتجات تونى كوزمتكس — عطور، مسك، دخون، مكياج وعناية. فلترة متقدمة وترتيب حسب السعر والتقييم.">
+<meta name="theme-color" content="#d94b8a">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div data-tc-header></div>
+
+<main>
+  <div class="page-head">
+    <div class="container">
+      <nav class="crumbs" aria-label="مسار التصفح" data-crumbs></nav>
+      <div class="row-between" style="margin-top:12px;flex-wrap:wrap;gap:10px">
+        <h1 class="h-lg" data-title>كل المنتجات</h1>
+        <p class="small muted" data-desc></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="shop">
+
+      <!-- ============================================ SIDEBAR FILTERS -->
+      <aside class="filters" id="tcFilters" aria-label="تصفية النتائج">
+        <div class="filters__head">
+          <h2 class="filters__title">التصفية</h2>
+          <button class="filters__clear" data-clear-all>مسح الكل</button>
+        </div>
+        <div data-filter-root></div>
+      </aside>
+
+      <!-- ============================================ RESULTS -->
+      <section>
+        <div class="shop__bar">
+          <span class="shop__count" data-count></span>
+          <div class="shop__tools">
+            <button class="btn btn--light btn--sm filter-btn" data-open-filters>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18M6 12h12M10 19h4"/></svg>
+              تصفية
+            </button>
+            <select class="select" data-sort aria-label="ترتيب حسب">
+              <option value="featured">الترتيب: المميّز</option>
+              <option value="new">الأحدث</option>
+              <option value="price-asc">السعر: من الأقل للأعلى</option>
+              <option value="price-desc">السعر: من الأعلى للأقل</option>
+              <option value="rating">الأعلى تقييماً</option>
+              <option value="popular">الأكثر مبيعاً</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="chips" data-chips></div>
+        <div class="p-grid" data-results></div>
+        <div data-pagination></div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ============================================ MOBILE FILTER DRAWER -->
+  <div class="filters-drawer" id="tcFilterDrawer" aria-label="التصفية">
+    <div class="drawer__head">
+      <span class="drawer__title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18M6 12h12M10 19h4"/></svg>
+        التصفية
+      </span>
+      <button class="icon-btn" data-close-filters aria-label="إغلاق">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="drawer__body" style="padding:0">
+      <div style="padding:14px 18px" data-filter-root></div>
+    </div>
+    <div class="drawer__foot">
+      <button class="btn btn--primary btn--block" data-close-filters>عرض النتائج</button>
+    </div>
+  </div>
+</main>
+
+<div data-tc-footer></div>
+
+<script src="assets/js/art.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/content.local.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/collection.js"></script>
+</body>
+</html>
